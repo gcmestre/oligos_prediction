@@ -1,4 +1,4 @@
-from src.artifacts.utils import generate_features_for_sequences, load_model, load_transformers, make_prediction
+from oligos_prediction.artifacts.utils import generate_features_for_sequences, load_model, load_transformers, make_prediction
 import pandas as pd
 import numpy as np
 import os

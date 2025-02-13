@@ -1,3 +1,10 @@
 [project]
 name = "oligos_prediction"
 version = "0.1.0"
+
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.dynamic]
+dependencies = {file = ["requirements.txt"]}
