@@ -1,3 +1,6 @@
 [project]
-name = "oligo-prediction"
+name = "oligo-predictor"
 version = "0.1.0"
+
+[tool.setuptools]
+py-modules = ["oligo_predictor"]
