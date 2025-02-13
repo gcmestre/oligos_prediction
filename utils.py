@@ -1,6 +1,6 @@
-import os, joblib
+import joblib
 import csv
-from generate_features import OligoFeatureCalculator
+from oligos_prediction.generate_features import OligoFeatureCalculator
 from itertools import product
 import pandas as pd
 

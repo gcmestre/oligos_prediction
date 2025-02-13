@@ -4,7 +4,7 @@ import numpy as np
 import os
 import warnings
 
-MODEL_PATH = "artifacts/saved_models/"
+MODEL_PATH = "../artifacts/saved_models/"
 MODEL_INFO_PATH = os.path.join(MODEL_PATH, "model_info.json")
 TRANSFORMER_PATH = os.path.join(MODEL_PATH, "scaler.pkl")
 TARGET_TRANSFORMER_PATH = os.path.join(MODEL_PATH, "target_transformer.pkl")
@@ -32,16 +32,3 @@ def run_predictions(sequence_data):
 
     # Print the prediction result
     return prediction[0]
-
-
-if __name__ == "__main__":
-    # Example input sequence and synthesis scale
-    # sequence = "ATGCATGCATGC"  # Replace with your input sequence
-    # sequence = "ACUUTATUCCAAAGGGCAGCUGA"  # Replace with your input sequence
-    sequence = "CGAAGCGCCCTACTCCACTCCUGGACAUUCAGAACAAGAA"  # Replace with your input sequence
-    synthesis_scale = 0.5  # Replace with the synthesis scale (if applicable)
-
-    sequence_data = [{'sequence': sequence,
-                    'synthesis_scale': synthesis_scale}]
-    # Run the main function
-    predicted_yield = run_predictions(sequence_data)
