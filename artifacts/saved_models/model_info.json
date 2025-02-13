@@ -1,0 +1,174 @@
+{
+    "model_name": "XGBoost",
+    "model_path": "artifacts/saved_model/XGBoost.pkl",
+    "evaluation_metrics": {
+        "RMSE": 5.289889181500058,
+        "MAE": 3.599281897603372,
+        "R2": 0.8379176378689679,
+        "CV_mean": 0.34405251347720517,
+        "CV_std": 0.16733410915642202
+    },
+    "config": {},
+    "feature_importance": [
+        {
+            "feature": "GC_count",
+            "importance": 0.3335370421409607
+        },
+        {
+            "feature": "coupling_efficiency",
+            "importance": 0.2814495265483856
+        },
+        {
+            "feature": "charge_density",
+            "importance": 0.13938601315021515
+        },
+        {
+            "feature": "GA_count",
+            "importance": 0.052384261041879654
+        },
+        {
+            "feature": "repeating_motifs",
+            "importance": 0.030116252601146698
+        },
+        {
+            "feature": "melting_temp",
+            "importance": 0.02809329144656658
+        },
+        {
+            "feature": "length",
+            "importance": 0.026568399742245674
+        },
+        {
+            "feature": "CA_count",
+            "importance": 0.022114863619208336
+        },
+        {
+            "feature": "synthesis_scale",
+            "importance": 0.012268352322280407
+        },
+        {
+            "feature": "hydrophobicity_score",
+            "importance": 0.011618795804679394
+        },
+        {
+            "feature": "deprotection_sensitivity",
+            "importance": 0.007751393131911755
+        },
+        {
+            "feature": "molecular_weight",
+            "importance": 0.007238417863845825
+        },
+        {
+            "feature": "max_gc_runs",
+            "importance": 0.006703936029225588
+        },
+        {
+            "feature": "hairpin_score",
+            "importance": 0.006627618335187435
+        },
+        {
+            "feature": "AG_count",
+            "importance": 0.00624878378584981
+        },
+        {
+            "feature": "difficult_coupling_steps",
+            "importance": 0.006038501393049955
+        },
+        {
+            "feature": "gc_content",
+            "importance": 0.005945021286606789
+        },
+        {
+            "feature": "3_prime_end_stability",
+            "importance": 0.005280615761876106
+        },
+        {
+            "feature": "purine_pyrimidine_ratio",
+            "importance": 0.0036398230586200953
+        },
+        {
+            "feature": "purification_difficulty",
+            "importance": 0.0019617383368313313
+        },
+        {
+            "feature": "sequence_complexity",
+            "importance": 0.0018259139033034444
+        },
+        {
+            "feature": "gc_scale_product",
+            "importance": 0.0017577672842890024
+        },
+        {
+            "feature": "5_prime_end_stability",
+            "importance": 0.00044240328134037554
+        },
+        {
+            "feature": "AC_count",
+            "importance": 0.00039602728793397546
+        },
+        {
+            "feature": "C_run_length",
+            "importance": 0.00025865010684356093
+        },
+        {
+            "feature": "AA_count",
+            "importance": 9.038612915901467e-05
+        },
+        {
+            "feature": "A_run_length",
+            "importance": 7.059302879497409e-05
+        },
+        {
+            "feature": "TT_count",
+            "importance": 6.939296144992113e-05
+        },
+        {
+            "feature": "CT_count",
+            "importance": 4.9185153329744935e-05
+        },
+        {
+            "feature": "TC_count",
+            "importance": 2.9055596314719878e-05
+        },
+        {
+            "feature": "T_run_length",
+            "importance": 2.009859963436611e-05
+        },
+        {
+            "feature": "CG_count",
+            "importance": 7.469171123375418e-06
+        },
+        {
+            "feature": "G_run_length",
+            "importance": 4.855530733038904e-06
+        },
+        {
+            "feature": "CC_count",
+            "importance": 3.4661622976273065e-06
+        },
+        {
+            "feature": "TA_count",
+            "importance": 1.5403717270601192e-06
+        },
+        {
+            "feature": "GG_count",
+            "importance": 5.004430363442225e-07
+        },
+        {
+            "feature": "g_quadruplex_potential",
+            "importance": 0.0
+        },
+        {
+            "feature": "TG_count",
+            "importance": 0.0
+        },
+        {
+            "feature": "AT_count",
+            "importance": 0.0
+        },
+        {
+            "feature": "GT_count",
+            "importance": 0.0
+        }
+    ]
+}
