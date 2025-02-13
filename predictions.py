@@ -11,7 +11,7 @@ TARGET_TRANSFORMER_PATH = os.path.join(MODEL_PATH, "target_transformer.pkl")
 MODEL = os.path.join(MODEL_PATH, "XGBoost.pkl")
 
 
-def main(sequence_data):
+def run_predictions(sequence_data):
     # Generate features for the input sequence and synthesis scale
     features_list = generate_features_for_sequences(sequence_data)
     data = pd.DataFrame(features_list)
@@ -31,7 +31,7 @@ def main(sequence_data):
 
 
     # Print the prediction result
-    print(f"Predicted yield: {prediction[0]}")
+    return prediction[0]
 
 
 if __name__ == "__main__":
@@ -44,4 +44,4 @@ if __name__ == "__main__":
     sequence_data = [{'sequence': sequence,
                     'synthesis_scale': synthesis_scale}]
     # Run the main function
-    main(sequence_data)
+    predicted_yield = run_predictions(sequence_data)
