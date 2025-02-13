@@ -1,0 +1,1 @@
+from src.oligos_prediction.predictions import run_predictions

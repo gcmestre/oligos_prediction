@@ -1,8 +1,7 @@
-from utils import generate_features_for_sequences, load_model, load_transformers, make_prediction
+from src.artifacts.utils import generate_features_for_sequences, load_model, load_transformers, make_prediction
 import pandas as pd
 import numpy as np
 import os
-import warnings
 
 MODEL_PATH = "../artifacts/saved_models/"
 MODEL_INFO_PATH = os.path.join(MODEL_PATH, "model_info.json")
