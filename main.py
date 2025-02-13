@@ -13,9 +13,8 @@ MODEL = os.path.join(MODEL_PATH, "XGBoost.pkl")
 
 def main(sequence_data):
     # Generate features for the input sequence and synthesis scale
-    features_list = [generate_features_for_sequences(sequence_data)]
-    data = pd.DataFrame(features_list[0])
-    # print(data)
+    features_list = generate_features_for_sequences(sequence_data)
+    data = pd.DataFrame(features_list)
     data = data.select_dtypes(include=[np.number])
     
 
