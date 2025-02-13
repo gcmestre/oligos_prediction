@@ -3,7 +3,7 @@ import pandas as pd
 import numpy as np
 import os
 
-MODEL_PATH = "src/artifacts/saved_models/"
+MODEL_PATH = "artifacts/saved_models"
 MODEL_INFO_PATH = os.path.join(MODEL_PATH, "model_info.json")
 TRANSFORMER_PATH = os.path.join(MODEL_PATH, "scaler.pkl")
 TARGET_TRANSFORMER_PATH = os.path.join(MODEL_PATH, "target_transformer.pkl")
