@@ -308,19 +308,19 @@ class OligoFeatureCalculator:
         g_runs = len(re.findall(r'G{3}', sequence))
         return g_runs * (g_runs - 1) if g_runs >= 4 else 0
     
-    def calculate_end_stability(self, sequence: str) -> float:
+    def calculate_end_stability(self, sequence: str) -> dict:
         """Calculate stability of 5' and 3' ends
 
         Args:
             sequence (str): sequence
 
         Returns:
-            float: _description_
+            dict: _description_
         """
-        end_length = 5
+        end_length = min(5, len(sequence))
         return {
             "5_prime": self.calculate_gc_content(sequence= sequence[:end_length]),
-            "3_prime": self.calculate_gc_content(sequence= sequence[-end_length])
+            "3_prime": self.calculate_gc_content(sequence= sequence[end_length:])
         }
 
     def calculate_molecular_weight(self, sequence: str) -> float:
