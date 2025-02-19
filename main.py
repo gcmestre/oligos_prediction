@@ -3,7 +3,7 @@ from src.oligos_prediction.predictions import run_predictions
 if __name__ == "__main__":
     # Example input sequence and synthesis scale
     # sequence = "ATGCATGCATGC"  # Replace with your input sequence
-    # sequence = "ACUUTATUCCAAAGGGCAGCUGA"  # Replace with your input sequence
+        # sequence = "ACUUTATUCCAAAGGGCAGCUGA"  # Replace with your input sequence
     sequence = "CGAAGCGCCCTACTCCACTCCUGGACAUUCAGAACAAGAA"  # Replace with your input sequence
     synthesis_scale = 0.5  # Replace with the synthesis scale (if applicable)
 
