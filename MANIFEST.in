@@ -1,2 +1,0 @@
-recursive-include oligo_prediction/artifacts/*
-recursive-include artifacts/*
