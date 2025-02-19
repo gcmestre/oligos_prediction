@@ -11,3 +11,6 @@ dependencies = [
     "xgboost==2.1.2",
     "dill",
 ]
+
+[tool.setuptools.package-data]
+"oligos_prediction" = ["artifacts/saved_models/*"]
