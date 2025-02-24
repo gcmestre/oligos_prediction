@@ -13,4 +13,4 @@ if __name__ == "__main__":
     
     # Run the main function
     predicted_yield, lower_bound, upper_bound = run_predictions(sequence_data)
-    print(f"predicted Yield: {predicted_yield}, 95% confidence interval Lower Bound: {lower_bound}, Upper Bound: {upper_bound}")
+    # print(f"predicted Yield: {predicted_yield}, 95% confidence interval Lower Bound: {lower_bound}, Upper Bound: {upper_bound}")
