@@ -11,3 +11,8 @@ dependencies = [
     "xgboost==2.1.2",
     "dill",
 ]
+
+
+[build-system]
+requires = ["setuptools>=64", "setuptools_scm>=8"]
+build-backend = "setuptools.build_meta"
