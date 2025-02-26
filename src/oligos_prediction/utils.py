@@ -190,7 +190,8 @@ def calculate_prediction_intervals(
     lower_bound = prediction - margin
     upper_bound = prediction + margin
     # Enforce physical yield limitations
-    lower_bound = max(min_yield, lower_bound)
-    upper_bound = min(max_yield, upper_bound)
+    lower_bound = float(max(min_yield, lower_bound))
+    upper_bound = float(min(max_yield, upper_bound))
     
+
     return lower_bound, upper_bound

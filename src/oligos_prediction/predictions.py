@@ -36,4 +36,4 @@ def run_predictions(sequence_data):
 
 
     # Print the prediction result
-    return prediction[0], lower_bound, upper_bound
+    return float(prediction[0]), lower_bound, upper_bound
