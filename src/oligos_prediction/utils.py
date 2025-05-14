@@ -3,6 +3,9 @@ import csv
 from oligos_prediction.generate_features import OligoFeatureCalculator
 from itertools import product
 import pandas as pd
+from scipy import stats
+from typing import Tuple
+import numpy as np
 
 
 ALL_DINUCLEOTIDES = [''.join(pair) for pair in product('ATGC', repeat=2)]
@@ -147,3 +150,48 @@ def transform_data(features_list, scaler):
     features_scaled = scaler.transform(features_df)
     scaled_df = pd.DataFrame(features_scaled, columns=features_df.columns)
     return scaled_df
+
+
+
+def calculate_prediction_intervals(
+    prediction: float,
+    residuals: pd.Series,
+    confidence_level: float = 95.0,
+    min_yield: float = 0.0,
+    max_yield: float = 30.0
+) -> Tuple[float, float]:
+    """
+    Calculate statistically correct prediction intervals using t-distribution.
+    
+    Args:
+        prediction: Model's predicted value
+        residuals: Series of historical residuals from the model
+        confidence_level: Confidence level (default: 95.0)
+        min_yield: Minimum possible yield value (default: 0.0)
+        max_yield: Maximum possible yield value (default: 100.0)
+    
+    Returns:
+        Tuple of (lower_bound, upper_bound)
+    """
+    # Degrees of freedom (number of residuals - 1)
+    n = len(residuals)
+    
+    # Standard error of prediction (standard deviation of residuals)
+    se_pred = np.std(residuals, ddof=1)  # ddof=1 for sample standard deviation
+    
+    # Calculate t-value for desired confidence level
+    alpha = (100 - confidence_level) / 100
+    t_value = stats.t.ppf(1 - alpha/2, df=n-1)
+    
+    # Calculate prediction interval
+    margin = t_value * se_pred
+    
+    # Calculate bounds
+    lower_bound = prediction - margin
+    upper_bound = prediction + margin
+    # Enforce physical yield limitations
+    lower_bound = float(max(min_yield, lower_bound))
+    upper_bound = float(min(max_yield, upper_bound))
+    
+
+    return lower_bound, upper_bound
